@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="@color/purple_500"
     tools:context=".MainFragment">
 
@@ -22,6 +23,33 @@
         app:layout_constraintWidth_default="percent"
         app:layout_constraintWidth_percent="0.5" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="@string/argument"
+        android:textColorHint="@android:color/holo_green_dark"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:endIconMode="clear_text"
+        app:helperText="Optional"
+        app:helperTextEnabled="true"
+        app:hintTextColor="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appCompatImageView"
+        app:startIconDrawable="@drawable/ic_baseline_touch_app_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiet_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeActionLabel="send"
+            android:maxLength="30" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -35,5 +63,15 @@
         app:layout_constraintBottom_toTopOf="@id/appCompatImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_touch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_baseline_touch_app_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

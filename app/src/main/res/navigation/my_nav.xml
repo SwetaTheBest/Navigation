@@ -32,7 +32,8 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <argument
             android:name="id"
-            android:defaultValue="0"
-            app:argType="integer" />
+            android:defaultValue="Hello Argument"
+            app:argType="string" />
+
     </fragment>
 </navigation>

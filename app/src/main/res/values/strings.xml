@@ -3,4 +3,5 @@
 
     <string name="main_text">Main Page</string>
     <string name="list_text">List</string>
+    <string name="argument">Argument</string>
 </resources>
